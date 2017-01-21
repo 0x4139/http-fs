@@ -4,7 +4,6 @@ import (
 	"github.com/gin-gonic/gin"
 	"path"
 	"os"
-	"log"
 	"time"
 	"net/http"
 	"fmt"
@@ -14,14 +13,7 @@ import (
 	"io/ioutil"
 )
 
-var savePath string
-
-func init() {
-	if savePath = os.Getenv("SAVEPATH"); savePath == "" {
-		panic("Please provide the SAVEPATH environment variable ")
-	}
-	log.Printf("SAVEPATH: %s", apiKey)
-}
+const savePath = "./data"
 
 func Read(c *gin.Context) {
 	filename := c.Query("filename")
