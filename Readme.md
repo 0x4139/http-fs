@@ -1,4 +1,4 @@
-# Project Title
+# HTTP-FS
 
 http-fs is a set of filesystem functions that work via http useful for when you want to use a naive approach to random accesing parts of your files via http
 
