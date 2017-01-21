@@ -20,5 +20,6 @@ func main() {
 		})
 	})
 	r.GET("/read", server.Read)
+	r.GET("/readat",server.ReadAt)
 	r.Run() // listen and serve on 0.0.0.0:8080
 }
