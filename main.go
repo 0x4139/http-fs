@@ -14,13 +14,9 @@ func main() {
 	r := gin.Default()
 	r.Use(server.ApiKeyMiddleWare)
 
-	r.GET("/ping", func(c *gin.Context) {
-		c.JSON(200, gin.H{
-			"message": "pong",
-		})
-	})
 	r.GET("/read", server.Read)
 	r.POST("/write",server.Write)
 	r.GET("/readat",server.ReadAt)
+	r.POST("/writeat",server.WriteAt)
 	r.Run() // listen and serve on 0.0.0.0:8080
 }
